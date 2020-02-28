@@ -71,17 +71,12 @@ export default {
     }
   },
   mounted(){
-    document.getElementsByClassName('selected').forEach(elem => document.getElementById(elem.getAttribute('id')).scrollIntoView({
-  behavior: 'smooth',
-  block: 'center',
-  inline: 'center'
-}));
-    
-    // document.querySelectorAll('input:checked').forEach(elem => {
-    //   console.log('app', elem.getAttribute('id'))
-    //   document.getElementById(elem.getAttribute('id')).scrollIntoView(true);
-    // });
-
+    let options = {
+      behavior: 'smooth',
+      block: 'center',
+      inline: 'center'
+    };
+    document.getElementsByClassName('selected').forEach(elem => document.getElementById(elem.getAttribute('id')).scrollIntoView(options));
   }
 }
 </script>
